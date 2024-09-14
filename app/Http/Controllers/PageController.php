@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // QUI VA INSERITO IL MODELS
+use App\Models\Travel;
 
 class PageController extends Controller
 {
     public function index(){
 
-        // $movies = Movie::orderBy('title')->get();
+        $travels = Travel::orderBy('title')->get();
         // $title = 'Elenco Film';
 
-        return view('home',);
-        // compact('movies', 'title')
+        return view('home', compact('travels',));
+        
     }
 
     public function about(){
