@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index(){
 
-        $travels = Travel::orderBy('title')->get();
+        $travels = Travel::orderBy('price')->get();
         // $title = 'Elenco Film';
 
         return view('home', compact('travels',));

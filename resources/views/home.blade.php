@@ -11,7 +11,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Offerta</th>
                     <th scope="col">Descrizione</th>
-                    <th scope="col">Prezzo</th>
+                    <th scope="col">Prezzo↑</th>
                     <th scope="col">Data di partenza</th>
                     <th scope="col">Riepilogo Pacchetto</th>
                 </tr>
@@ -40,15 +40,7 @@
 
 
         @dump($travels)
-        @forelse ($travels as $travel)
-            <h4>{{ $travel->title }}</h4>
-            <h4>{{ $travel->slug . ' ' . '€' }}</h4>
-            <h4>{{ $travel->title }}</h4>
-            <h4>{{ $travel->title }}</h4>
 
-        @empty
-            <h4>Non ci sono pacchetti disponibili</h4>
-        @endforelse
     </div>
 @endsection
 
